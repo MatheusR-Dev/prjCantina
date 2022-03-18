@@ -1,0 +1,83 @@
+<div class="container-fluid bg-secondary">
+  <div class="row">
+    <div class="col-2">
+      <img class="p-2" src="../../assets/icon.png" alt="">
+    </div>
+    <div class="col-8 d-flex justify-content-center align-items-center">CANTINA</div>
+    <div class="col-2 ">
+      <button class="btn btn-light mt-2 mr-2 w-75 h-75" (click)="limpar()">
+        <img src="../../assets/reset.png" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="row mb-4 mt-4">
+    <div class="col-5 ps-5 d-flex align-itens-center">
+      Hotdog
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="removeHotDog()">-</button>
+    </div>
+
+    <div class="col-3 d-flex align-items-center">
+      <input type="number" class="w-100" [(ngModel)]="qtdHotDog" (keyup)="calcularTotal()">
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="addHotDog()">+</button>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-5 ps-5">Refrigerante</div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="removeRefri()">-</button>
+    </div>
+
+    <div class="col-3 d-flex align-items-center">
+      <input type="number" class="w-100" [(ngModel)]="qtdRefri">
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="addRefri()">+</button>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-5 ps-5">Bala</div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="removeBala()">-</button>
+    </div>
+
+    <div class="col-3 d-flex align-items-center">
+      <input type="number" class="w-100" [(ngModel)]="qtdBala">
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="addBala()">+</button>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-5 ps-5">Chocolate</div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="removeChocolate()">-</button>
+    </div>
+
+    <div class="col-3 d-flex align-items-center">
+      <input type="number" class="w-100" [(ngModel)]="qtdChocolate">
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="addChocolate()">+</button>
+    </div>
+  </div>
+
+  <div class="text-center display-5 fw-bold mt-5 mb-2">
+    Total R$ {{resultado}}
+  </div>
+</div>
