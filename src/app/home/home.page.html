@@ -37,7 +37,7 @@
     </div>
 
     <div class="col-3 d-flex align-items-center">
-      <input type="number" class="w-100" [(ngModel)]="qtdRefri">
+      <input type="number" class="w-100" [(ngModel)]="qtdRefri" (keyup)="calcularTotal()">
     </div>
 
     <div class="col-2">
@@ -53,7 +53,7 @@
     </div>
 
     <div class="col-3 d-flex align-items-center">
-      <input type="number" class="w-100" [(ngModel)]="qtdBala">
+      <input type="number" class="w-100" [(ngModel)]="qtdBala" (keyup)="calcularTotal()">
     </div>
 
     <div class="col-2">
@@ -69,7 +69,7 @@
     </div>
 
     <div class="col-3 d-flex align-items-center">
-      <input type="number" class="w-100" [(ngModel)]="qtdChocolate">
+      <input type="number" class="w-100" [(ngModel)]="qtdChocolate" (keyup)="calcularTotal()">
     </div>
 
     <div class="col-2">
